@@ -1,0 +1,18 @@
+
+[Thu Aug 27 11:41:08.295585 2020] [cgi:warn] [pid 32387] [client 192.168.5.79:57112] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Aug 27 11:41:08.309058 2020] [cgi:error] [pid 32387] [client 192.168.5.79:57112] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Aug 27 11:41:16.447172 2020] [cgi:warn] [pid 32299] [client 192.168.5.79:57113] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/seguridad/login
+[Thu Aug 27 11:41:16.447264 2020] [cgi:error] [pid 32299] [client 192.168.5.79:57113] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/seguridad/login
+[Thu Aug 27 11:42:08.369192 2020] [cgi:warn] [pid 32387] [client 192.168.5.79:57112] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Dec 17 16:10:57.597589 2020] [cgi:warn] [pid 12909] [client 192.168.5.70:9209] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Dec 17 16:10:57.605691 2020] [cgi:error] [pid 12909] [client 192.168.5.70:9209] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Dec 17 16:12:03.160764 2020] [cgi:warn] [pid 12870] [client 192.168.5.70:9220] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Thu Dec 17 16:12:03.160855 2020] [cgi:error] [pid 12870] [client 192.168.5.70:9220] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Wed Jul 28 12:34:15.991679 2021] [cgi:warn] [pid 12656] [client 192.168.3.7:63736] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Wed Jul 28 12:34:15.999177 2021] [cgi:error] [pid 12656] [client 192.168.3.7:63736] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:32:40.294010 2021] [cgi:warn] [pid 31345] [client 192.168.6.8:58758] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:32:40.319621 2021] [cgi:error] [pid 31345] [client 192.168.6.8:58758] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:32:56.512099 2021] [cgi:warn] [pid 31337] [client 192.168.6.8:58762] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:32:56.512368 2021] [cgi:error] [pid 31337] [client 192.168.6.8:58762] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:33:01.778584 2021] [cgi:warn] [pid 31382] [client 192.168.6.8:58763] AH01220: Timeout waiting for output from CGI script /var/www/cgi-bin/php.fastcgi, referer: http://consumo.cecmed.local/
+[Tue Nov 23 13:33:01.778682 2021] [cgi:error] [pid 31382] [client 192.168.6.8:58763] Script timed out before returning headers: php.fastcgi, referer: http://consumo.cecmed.local/

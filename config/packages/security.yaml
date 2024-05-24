@@ -1,0 +1,59 @@
+security:
+    enable_authenticator_manager: false
+    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    Superadministrador:
+                        password: $2y$13$NKuzZGv.TH6y9uXtsl4dKeHpsGS1QLmrQz.pMyxhe2dVhxVorXhDK
+                        roles: 'ROLE_SUPERADMIN'
+        my_ldap:
+            ldap:
+                service: Symfony\Component\Ldap\Ldap
+                base_dn: 'ou=CECMED,dc=cecmed,dc=local'
+                search_dn: "cn=servidores,ou=USUARIOS,ou=CECMED,dc=cecmed,dc=local"
+                search_password: 's3rv3r.CECMED'
+                default_roles: ROLE_USER
+        chain_provider:
+            chain:
+                 providers: ['in_memory', 'my_ldap']
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            lazy: true
+            provider: chain_provider
+            form_login:
+                login_path: usuario_login
+                check_path: usuario_login
+                default_target_path: main
+            form_login_ldap:
+                service: Symfony\Component\Ldap\Ldap
+                login_path: usuario_login
+                check_path: usuario_login
+                default_target_path: main
+                dn_string: 'cecmed\{username}'
+
+            logout:
+                path: usuario_logout
+                target: usuario_login
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+       - { path: ^/seguridad/login, roles: PUBLIC_ACCESS }
+       - { path: ^/, roles: IS_AUTHENTICATED_FULLY }

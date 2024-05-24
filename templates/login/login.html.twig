@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<main role="main" class="flex-shrink-00 py-5" style="margin: auto">
+
+<div class="text-center">
+    <img src="{{ asset('img/logo.png') }}" class="h-25 w-50">
+</div>
+    <br>
+
+    <div class="card flex-shrink-00" style="width: 400px !important;">
+        <div class="card-body">
+
+            <h3 CLASS="border-bottom border-gray text-center">Formulario de Login </h3>
+
+            {% if msg %}
+                <div class="alert alert-{{ msg_type }}">{{ msg }}</div>
+            {% endif %}
+
+            <br>
+
+            <form action="{{ path('usuario_login') }}" method="post" novalidate="novalidate">
+                <div class="form-group">
+                    <label for="email">Usuario</label>
+                    <input class="form-control" name="_username" type="text" value="{{ last_username }}" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <div class="d-block">
+                        <label for="password" class="control-label">Contraseña</label>
+                    </div>
+                    <input class="form-control" autocomplete="off" id="password" name="_password" type="password" required>
+                </div>
+
+                <br>
+                <i>Nota: Introduzca su usuario y contraseña del dominio.</i>
+                <hr>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</main>
+
+    <footer class="footer mt-auto py-3 text-center">
+        <div class="container">
+            <span class="text-muted">Copyright © {{ 'now'|date('Y') }} Departamento de Infocomunicaciones CECMED.</span>
+        </div>
+    </footer>
+
+
+{% endblock %}
